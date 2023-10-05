@@ -1,8 +1,4 @@
-export REGION=
 
-gcloud auth list
-gcloud config list project
-gcloud config set dataproc/region=$Region
 gcloud dataproc clusters create example-cluster --worker-boot-disk-size 500
 gcloud dataproc jobs submit spark --cluster example-cluster \
   --class org.apache.spark.examples.SparkPi \
